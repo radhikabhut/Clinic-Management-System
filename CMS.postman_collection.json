@@ -1,0 +1,987 @@
+{
+	"info": {
+		"_postman_id": "b94ec75a-d7c0-4477-95be-fe18cb6dc281",
+		"name": "CMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36200583"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "createUSer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rec.kina@gmail.com\",\r\n    \"password\": \"\",\r\n    \"role\": \"receptionist\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createUSer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rec.kina@gmail.com\",\r\n    \"password\": \"rec1234\",\r\n    \"role\": \"receptionist\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Jun 2025 11:51:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"ba5ba000-5fb5-4b2a-b28a-beeec1aca18e\"\n    }\n}"
+						},
+						{
+							"name": "createUSer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rec.kina@gmail.com\",\r\n    \"password\": \"\",\r\n    \"role\": \"receptionist\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/v1/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Jun 2025 11:52:57 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"cannot parse JSON\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/ping",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPatient",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"veena\",\r\n    \"contact\" : \"1111111111\",\r\n    \"address\" : \" 402-Ridhhi  Sidhhi Apt\",\r\n    \"reason\" : \"gas\",\r\n    \"consult_by\" : \"dr.Radhika\",\r\n    \"date_of_visit\" : \"2025-06-15T15:04:05Z\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/patients",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"patients"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "createPatientby doc",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"raj\",\r\n    \"contact\" : \"1111111111\",\r\n    \"address\" : \" 402-Ridhhi  Sidhhi Apt\",\r\n    \"reason\" : \"accidity\",\r\n    \"consult_by\" : \"dr.Radhika\",\r\n    \"date_of_visit\" : \"2025-06-15T15:04:05Z\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/patients",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 11:53:53 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"you are not authorized to access this resource\"\n}"
+				},
+				{
+					"name": "createPatient by receptionist",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"raj\",\r\n    \"contact\" : \"1111111111\",\r\n    \"address\" : \" 402-Ridhhi  Sidhhi Apt\",\r\n    \"reason\" : \"accidity\",\r\n    \"consult_by\" : \"dr.Radhika\",\r\n    \"date_of_visit\" : \"2025-06-15T15:04:05Z\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/patients",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 11:55:45 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"1028491d-5190-48ae-919d-7745feb351d1\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"john dalya\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/patients/aa67c7b1-9b04-4508-862b-2f15629e99fb",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"patients",
+						"aa67c7b1-9b04-4508-862b-2f15629e99fb"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update by rec",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"john doei\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/patients/aa67c7b1-9b04-4508-862b-2f15629e99fb",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients",
+								"aa67c7b1-9b04-4508-862b-2f15629e99fb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 12:29:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Patient updated successfully\",\n    \"success\": true\n}"
+				},
+				{
+					"name": "update  by doc",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"john dalya\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/patients/aa67c7b1-9b04-4508-862b-2f15629e99fb",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients",
+								"aa67c7b1-9b04-4508-862b-2f15629e99fb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 12:33:41 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Patient updated successfully\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/patients",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"patients"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List by patient",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/patients",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 12:17:01 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "824"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": \"130da76e-14e6-46df-ae68-88952fd5b32d\",\n            \"name\": \"John Doe\",\n            \"contact\": \"1234567890\",\n            \"addrress\": \"123 Main Street\",\n            \"reason\": \"Fever\",\n            \"consult_by\": \"Dr. Smith\",\n            \"date_of_visit\": \"2025-06-16T00:00:00Z\",\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"aa67c7b1-9b04-4508-862b-2f15629e99fb\",\n            \"name\": \"John Doe\",\n            \"contact\": \"1234567890\",\n            \"addrress\": \"123 Main Street\",\n            \"reason\": \"Fever\",\n            \"consult_by\": \"Dr. Smith\",\n            \"date_of_visit\": \"2025-06-16T00:00:00Z\",\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"1028491d-5190-48ae-919d-7745feb351d1\",\n            \"name\": \"raj\",\n            \"contact\": \"1111111111\",\n            \"addrress\": \" 402-Ridhhi  Sidhhi Apt\",\n            \"reason\": \"accidity\",\n            \"consult_by\": \"dr.Radhika\",\n            \"date_of_visit\": \"2025-06-16T00:00:00Z\",\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "list by doc",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/patients",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 12:36:00 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1028"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": \"130da76e-14e6-46df-ae68-88952fd5b32d\",\n            \"name\": \"John Doe\",\n            \"contact\": \"1234567890\",\n            \"addrress\": \"123 Main Street\",\n            \"reason\": \"Fever\",\n            \"consult_by\": \"Dr. Smith\",\n            \"date_of_visit\": \"2025-06-16T00:00:00Z\",\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"1028491d-5190-48ae-919d-7745feb351d1\",\n            \"name\": \"raj\",\n            \"contact\": \"1111111111\",\n            \"addrress\": \" 402-Ridhhi  Sidhhi Apt\",\n            \"reason\": \"accidity\",\n            \"consult_by\": \"dr.Radhika\",\n            \"date_of_visit\": \"2025-06-16T00:00:00Z\",\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"39a9334b-9f20-4000-9461-da1720eb55bc\",\n            \"name\": \"kishan\",\n            \"contact\": \"1111111111\",\n            \"addrress\": \" 402-Ridhhi  Sidhhi Apt\",\n            \"reason\": \"accidity\",\n            \"consult_by\": \"dr.Radhika\",\n            \"date_of_visit\": \"2025-06-16T00:00:00Z\",\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        },\n        {\n            \"id\": \"aa67c7b1-9b04-4508-862b-2f15629e99fb\",\n            \"name\": \"john dalya\",\n            \"reason\": \"Fever\",\n            \"date_of_visit\": \"2025-06-16T00:00:00Z\",\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "List by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kishan\",\r\n    \"contact\" : \"1111111111\",\r\n    \"address\" : \" 401-Ridhhi  Sidhhi Apt\",\r\n    \"reason\" : \"accidity\",\r\n    \"consult_by\" : \"dr.Radhika\",\r\n    \"date_of_visit\" : \"2025-06-15T15:04:05Z\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/patients/130da76e-14e6-46df-ae68-88952fd5b32d",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"patients",
+						"130da76e-14e6-46df-ae68-88952fd5b32d"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List by Id  by rec",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kishan\",\r\n    \"contact\" : \"1111111111\",\r\n    \"address\" : \" 401-Ridhhi  Sidhhi Apt\",\r\n    \"reason\" : \"accidity\",\r\n    \"consult_by\" : \"dr.Radhika\",\r\n    \"date_of_visit\" : \"2025-06-15T15:04:05Z\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/patients/130da76e-14e6-46df-ae68-88952fd5b32d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients",
+								"130da76e-14e6-46df-ae68-88952fd5b32d"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 12:25:44 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "305"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"130da76e-14e6-46df-ae68-88952fd5b32d\",\n        \"name\": \"John Doe\",\n        \"contact\": \"1234567890\",\n        \"addrress\": \"123 Main Street\",\n        \"reason\": \"Fever\",\n        \"consult_by\": \"Dr. Smith\",\n        \"date_of_visit\": \"2025-06-16T00:00:00Z\",\n        \"created_at\": \"2025-06-16T11:08:10.533988Z\",\n        \"updated_at\": \"2025-06-16T11:08:10.533988Z\"\n    },\n    \"sucess\": true\n}"
+				},
+				{
+					"name": "List by Id by doc",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kishan\",\r\n    \"contact\" : \"1111111111\",\r\n    \"address\" : \" 401-Ridhhi  Sidhhi Apt\",\r\n    \"reason\" : \"accidity\",\r\n    \"consult_by\" : \"dr.Radhika\",\r\n    \"date_of_visit\" : \"2025-06-15T15:04:05Z\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/patients/130da76e-14e6-46df-ae68-88952fd5b32d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients",
+								"130da76e-14e6-46df-ae68-88952fd5b32d"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 12:37:01 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "305"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"130da76e-14e6-46df-ae68-88952fd5b32d\",\n        \"name\": \"John Doe\",\n        \"contact\": \"1234567890\",\n        \"addrress\": \"123 Main Street\",\n        \"reason\": \"Fever\",\n        \"consult_by\": \"Dr. Smith\",\n        \"date_of_visit\": \"2025-06-16T00:00:00Z\",\n        \"created_at\": \"2025-06-16T11:08:10.533988Z\",\n        \"updated_at\": \"2025-06-16T11:08:10.533988Z\"\n    },\n    \"sucess\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/patients/130da76e-14e6-46df-ae68-88952fd5b32d",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"patients",
+						"130da76e-14e6-46df-ae68-88952fd5b32d"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete by rec",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/patients/d3fd509b-90f4-413e-990a-c6b3f6710d81",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients",
+								"d3fd509b-90f4-413e-990a-c6b3f6710d81"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 12:28:32 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Patient deleted successfully\",\n    \"success\": true\n}"
+				},
+				{
+					"name": "delete by doc",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/patients/130da76e-14e6-46df-ae68-88952fd5b32d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients",
+								"130da76e-14e6-46df-ae68-88952fd5b32d"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 12:37:26 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"you are not authorized to access this resource\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"// Variables and JSON Keys are case sensitive!\r",
+							"pm.collectionVariables.set(\"token\", jsonData.token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"dr.kishan@gmail.com\",\r\n    \"password\": \"doc123\",\r\n    \"role\": \"doctor\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/v1/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login by doc",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dr.kishan@gmail.com\",\r\n    \"password\": \"doc123\",\r\n    \"role\": \"doctor\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 07:14:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "179"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"sdfdfsdfdsf\"\n}"
+				},
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dr.kishan@gmail.com\",\r\n    \"password\": 123,\r\n    \"role\": \"doctor\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 11:52:33 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Invalid input\"\n}"
+				},
+				{
+					"name": "Login by rec",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rec.meena@gmail.com\",\r\n    \"password\": \"rec123\",\r\n    \"role\": \"receptionist\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jun 2025 12:28:11 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "187"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"sadfwere\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
